@@ -6,6 +6,7 @@ public class ClassesAndObjects {
         personOne.name = "Alister";
         personOne.age = 25;
         personOne.sayHello();
+        int yearOne = personOne.calculateYears();
 
         System.out.println();
 
@@ -13,6 +14,12 @@ public class ClassesAndObjects {
         personTwo.name = "Rick";
         personTwo.age = 47;
         personTwo.speak();
+        int yearTwo = personTwo.calculateYears();
+
+        System.out.println();
+
+        System.out.printf("Первому человеку до пенсии: %s лет%n", yearOne);
+        System.out.printf("Второму человеку до пенсии: %s лет%n", yearTwo);
     }
 }
 class Person {
@@ -31,13 +38,22 @@ class Person {
     }
     */
 
+    int calculateYears() {
+        int years = 65 - age;
+        return years;
+        //System.out.printf("Количество лет до пенсии: %s", years);
+    }
+
     void speak() {
+        Integer x = sayHello(); //
+
         for (int i = 0; i < 3; i++)
             System.out.printf("Меня зовут %s, мне %s лет%n", name, age); //1 вариант написания
         //System.out.println("Меня зовут %s, мне %s лет%n".formatted(name, age)); //2 вариант написания
     }
-    void sayHello(){
+    int sayHello() {
         System.out.println("Привет!");
+        return 1;
     }
 }
 /*
