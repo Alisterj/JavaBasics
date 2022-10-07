@@ -3,20 +3,23 @@ import java.util.function.Predicate;
 public class ClassesAndObjects {
     public static void main(String[] args) { //метод main
         Person personOne = new Person();
-        personOne.name = "Alister";
-        personOne.age = 25;
+        personOne.setNameAndAge("Alister", 25);
+        personOne.speak();
         personOne.sayHello();
         int yearOne = personOne.calculateYears();
 
+        ///////////////////////////////////////
         System.out.println();
+        ///////////////////////////////////////
 
         Person personTwo = new Person();
-        personTwo.name = "Rick";
-        personTwo.age = 47;
+        personTwo.setNameAndAge("Rick", 47);
         personTwo.speak();
         int yearTwo = personTwo.calculateYears();
 
+        ///////////////////////////////////////
         System.out.println();
+        ///////////////////////////////////////
 
         System.out.printf("Первому человеку до пенсии: %s лет%n", yearOne);
         System.out.printf("Второму человеку до пенсии: %s лет%n", yearTwo);
@@ -37,6 +40,11 @@ class Person {
         return false;
     }
     */
+
+    void setNameAndAge(String userName, int userAge) {
+        name = userName;
+        age = userAge;
+    }
 
     int calculateYears() {
         int years = 65 - age;
