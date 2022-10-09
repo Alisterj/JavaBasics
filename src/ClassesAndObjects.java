@@ -3,36 +3,47 @@ import java.util.function.Predicate;
 public class ClassesAndObjects {
     public static void main(String[] args) { //метод main
         Person personOne = new Person();
-        personOne.setNameAndAge("Alister", 25);
-        personOne.speak();
-        personOne.sayHello();
-        int yearOne = personOne.calculateYears();
+        personOne.setName("");
+        personOne.setAge(-36);
+        //personOne.setNameAndAge("Alister", 25);
+        //personOne.speak();
 
-        ///////////////////////////////////////
-        System.out.println();
-        ///////////////////////////////////////
-
-        Person personTwo = new Person();
-        personTwo.setNameAndAge("Rick", 47);
-        personTwo.speak();
-        int yearTwo = personTwo.calculateYears();
-
-        ///////////////////////////////////////
-        System.out.println();
-        ///////////////////////////////////////
-
-        System.out.printf("Первому человеку до пенсии: %s лет%n", yearOne);
-        System.out.printf("Второму человеку до пенсии: %s лет%n", yearTwo);
+        System.out.printf("Выводим значение в main методе: %s%n", personOne.getName());
+        System.out.printf("Выводим значение в main методе: %s%n", personOne.getAge());
     }
 }
 class Person {
-    //У класса могут быть
-    // 1. Данные (поля)
-    // 2. Действия которые он может совершить (методы)
-    String name;
-    int age;
+    private String name;
+    private int age;
 
-//  Predicate<String> x = s -> false; // еще раз повторить и разобрать
+    public void setName(String userName){
+        if(userName.isEmpty())
+            System.out.println("Введено пустое имя");
+        else
+            name = userName;
+    }
+    public String getName(){
+        return name;
+    }
+
+    public void setAge(int userAge) {
+        if (userAge<0)
+            System.out.println("Вы ввели некорректное значение, возраст должен быть положительным");
+        else
+            age = userAge;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    void speak() {
+        for (int i = 0; i < 3; i++)
+            System.out.printf("Меня зовут %s, мне %s лет%n", name, age); //1 вариант написания
+        //System.out.println("Меня зовут %s, мне %s лет%n".formatted(name, age)); //2 вариант написания
+    }
+
+    //  Predicate<String> x = s -> false; // еще раз повторить и разобрать
     /*
     Predicate<String> x = new Predicate<String>() {   // еще раз повторить и разобрать
     @Override
@@ -40,29 +51,6 @@ class Person {
         return false;
     }
     */
-
-    void setNameAndAge(String userName, int userAge) {
-        name = userName;
-        age = userAge;
-    }
-
-    int calculateYears() {
-        int years = 65 - age;
-        return years;
-        //System.out.printf("Количество лет до пенсии: %s", years);
-    }
-
-    void speak() {
-        Integer x = sayHello(); //
-
-        for (int i = 0; i < 3; i++)
-            System.out.printf("Меня зовут %s, мне %s лет%n", name, age); //1 вариант написания
-        //System.out.println("Меня зовут %s, мне %s лет%n".formatted(name, age)); //2 вариант написания
-    }
-    int sayHello() {
-        System.out.println("Привет!");
-        return 1;
-    }
 }
 /*
 class test{
