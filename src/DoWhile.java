@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class doWhile {
+public class DoWhile {
     public static void main(String[] args) {
         Scanner scannerData = new Scanner(System.in);
         System.out.println("Введите 5: ");

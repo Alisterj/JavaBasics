@@ -1,19 +1,19 @@
-public class lesson19This {
+public class Lesson19This {
     public static void main(String[] args) {
-        Human person = new Human();
+        HumanOne person = new HumanOne();
         person.setName("Alister");
         person.setAge(15);
         person.getInfo();
 
         ///////////////////////////////////////
 
-        Human personTwo = new Human();
+        HumanOne personTwo = new HumanOne();
         personTwo.setName("Rem");
         personTwo.setAge(26);
         personTwo.getInfo();
     }
 }
-class Human{
+class HumanOne {
     private String name;
     private int age;
 
