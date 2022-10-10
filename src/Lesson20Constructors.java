@@ -1,27 +1,33 @@
 public class Lesson20Constructors {
     public static void main(String[] args) {
         //earlier
-        Human personOne = new Human("Rick", 26);
+        HumanTwo personOne = new HumanTwo("Rick", 26);
         personOne.setName("Alis");
         personOne.setAge(22);
-        Human personTwo = new Human();
+        HumanTwo personTwo = new HumanTwo();
+
+        //Human.toStudent(personOne, 5);
+
+        String commonName = HumanTwo.COMMON_NAME;
     }
 }
-class Human{
+class HumanTwo {
+    public static String COMMON_NAME = "Als";
+
     private String name;
     private int age;
 
-    public Human(){
+    public HumanTwo(){
         System.out.println("From first constructor");
         this.name = "Имя по умолчанию";
         this.age = 0;
     }
 
-    public Human(String name){
+    public HumanTwo(String name){
         System.out.println("From second constructor");
         this.name = name;
     }
-    public Human(String name, int age){
+    public HumanTwo(String name, int age){
         System.out.println("From third constructor");
         this.name = name;
         this.age = age;
@@ -34,5 +40,35 @@ class Human{
     public void setAge(int age) {
         this.age = age;
     }
+
+    /*public static Student toStudent(int grade) {
+        return new Student(grade, name, age);
+    }*/
+
     //Constructors
+}
+
+class Student{
+    private final int grade;
+
+    private final String name;
+    private final int age;
+
+    public Student(int grade, String name, int age) {
+        this.grade = grade;
+        this.name = name;
+        this.age = age;
+    }
+
+    public int getGrade() {
+        return grade;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getName() {
+        return name;
+    }
 }
