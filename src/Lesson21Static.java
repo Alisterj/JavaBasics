@@ -17,35 +17,35 @@ public class Lesson21Static {
         /*Math.pow(2, 4);
         System.out.println(Math.PI);*/
 
-        Human personOne = new Human("Alister", 23);
-        Human personTwo = new Human("Rick", 36);
+        HumanThree personOne = new HumanThree("Alister", 23);
+        HumanThree personTwo = new HumanThree("Rick", 36);
 
         personOne.printNumberOfPeople();
         personTwo.printNumberOfPeople();
 
-        Human personThree = new Human("Rick", 36);
+        HumanThree personThree = new HumanThree("Rick", 36);
         personOne.printNumberOfPeople();
         personTwo.printNumberOfPeople();
         personThree.printNumberOfPeople();
     }
 }
 
-class Human {
+class HumanThree {
     private String name;
     private int age;
     public static String description;
     private static int countPeople;
 
-    public Human() {
+    public HumanThree() {
         this("Bob", 12);
     }
 
-    public Human(String name) {
+    public HumanThree(String name) {
         System.out.println("Второй конструктор");
         this.name = name;
     }
 
-    public Human(String name, int age) {
+    public HumanThree(String name, int age) {
         System.out.println("Третий конструктор");
         this.name = name;
         this.age = age;
