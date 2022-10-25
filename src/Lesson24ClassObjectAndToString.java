@@ -17,6 +17,6 @@ class HumanFour24 {
         this.age = age;
     }
     public String toString(){
-        return name + ", " + age;
+        return new StringBuilder(name).append(", ").append(age).toString();
     }
 }
