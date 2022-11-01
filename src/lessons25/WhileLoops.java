@@ -1,3 +1,5 @@
+package lessons25;
+
 public class WhileLoops {
     public static void main(String[] args) {
         //boolean t = true;

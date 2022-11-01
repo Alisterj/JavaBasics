@@ -1,3 +1,5 @@
+package lessons25;
+
 public class Arrays_of_Strings {
     public static void main(String[] args) {
         //Разница между ссылочными и примитивынми типами данных

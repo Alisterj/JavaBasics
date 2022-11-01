@@ -1,3 +1,5 @@
+package lessons25;
+
 public class Lesson20Constructors {
     public static void main(String[] args) {
         //earlier
@@ -41,9 +43,6 @@ class HumanTwo {
         this.age = age;
     }
 
-    /*public static Student toStudent(int grade) {
-        return new Student(grade, name, age);
-    }*/
 
     //Constructors
 }

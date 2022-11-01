@@ -1,3 +1,5 @@
+package lessons25;
+
 public class Lesson19This {
     public static void main(String[] args) {
         HumanOne person = new HumanOne();

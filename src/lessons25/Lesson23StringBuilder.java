@@ -1,3 +1,5 @@
+package lessons25;
+
 //более глубокое изучение строк
 //тип данных string - immutable
 public class Lesson23StringBuilder {

@@ -1,3 +1,5 @@
+package lessons25;
+
 public class Lesson21Static {
     public static void main(String[] args) {
         /*Human.description = "FFFf";

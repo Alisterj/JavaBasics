@@ -1,6 +1,8 @@
+package lessons25;
+
 public class Dog extends Animal {
     public void eat() {
-        System.out.println("Dog's eating");
+        System.out.println("Dogs is eating");
     }
     public void bark() {
         System.out.println("I'm barking");

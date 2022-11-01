@@ -1,4 +1,4 @@
-import java.util.function.Predicate;
+package lessons25;
 
 public class ClassesAndObjects {
     public static void main(String[] args) { //метод main

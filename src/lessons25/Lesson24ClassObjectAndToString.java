@@ -1,3 +1,5 @@
+package lessons25;
+
 public class Lesson24ClassObjectAndToString {
     public static void main(String[] args) {
         String str = "Alisterj";
