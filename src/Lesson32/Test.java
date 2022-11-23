@@ -12,8 +12,5 @@ public class Test {
         //И лежат в пакете java.lang
         //И как известно доступны по умолчанию - без импорта
         Integer.parseInt("123");
-
-        Boolean.
-
     }
 }
